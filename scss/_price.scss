@@ -1,0 +1,88 @@
+h2{
+	@extend .underline;
+	display: block;
+	max-width: 90px;
+	margin: 0 auto 20px;
+}
+
+.plan{
+	margin-bottom: 60px;
+	> li{
+		border: 3px solid $glay;
+		border-radius: 1.0rem;
+		text-align: center;
+		margin-bottom: 30px;
+		
+		&:nth-child(2){
+			border: 3px solid $lightBlue;
+			h3{
+				background-color: $lightBlue;
+				color: #fff;
+			}
+			a.btn{
+				background-color: $lightBlue;
+				color: #fff;
+			}
+		}
+		&:nth-child(3){
+			border: 3px solid $blue;
+			h3{
+				background-color: $blue;
+				color: #fff;
+			}
+			a.btn{
+				background-color: $blue;
+				color: #fff;
+			}
+		}
+	}
+	h3{
+		background-color: $glay;
+		padding: 0.5rem;
+		border-radius: 0.5rem 0.5rem 0 0;
+		margin-bottom: 10px;
+	}
+	.function{
+		text-align: left;
+		width: calc(100% - 2.0rem);
+		margin: 0 auto;
+		> li{
+			width: 100%;
+			&.on{
+				&::before{
+					display: inline-block;
+					content: url(../images/price/icon01.svg);
+					width: 1.0rem;
+					height: 1.0rem;
+					margin-right: 5px;
+				}
+			}
+			&.off{
+				&::before{
+					display: inline-block;
+					content: url(../images/price/icon02.svg);
+					width: 1.0rem;
+					height: 1.0rem;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	a.btn{
+		display: inline-block;
+		background-color: $glay;
+		width: calc(100% - 2.0rem);
+		margin: 1.0rem auto;
+		padding: 0.5rem;
+		border-radius: 2.0rem;
+		font-weight: bold;
+		@include drop_shadow;
+	}
+}
+
+a.coupon{
+	display: block;
+	max-width: 600px;
+	margin: 30px auto 90px;
+	@include image_drop_shadow;
+}

@@ -1,0 +1,103 @@
+<%
+var pageName = 'top';
+var pageType = 'normal';
+var _default = json['default'];
+var _pageData = json['top'];
+%>
+
+<%- 
+include('./includes/_header',{
+   pageName:pageName,
+   pageType:pageType,
+   _default:_default,
+   _pageData:_pageData,
+});
+%>
+
+<!--各ページコンテンツここから-->
+<main id="<%= pageName %>">
+   <div class="main_visual">
+      <div class="base_w col2">
+         <div>
+            <p class="large">スマホがかかりつけ医になる時代。<br>
+               AIがあなたの健康をトータルサポート。</p>
+            <h2><img src="images/common/logo.svg" alt="AI Doctor"></h2>
+         </div>
+         <div>
+            <img src="images/top/main_illust.png">
+         </div>
+      </div>
+   </div>
+
+   <div class="base_w col2" id="about">
+      <div>
+         <img src="images/top/img01.jpg">
+      </div>
+      <div>
+         <h3 class="underline">ABOUT</h3>
+         <p class="large">
+            健康にまつわるデータをスマホで一括管理。<br>
+            誰もが手軽に医療にアクセスできる世界を。
+         </p>
+         <p>「AIドクター」は、24時間いつでも健康相談ができるAI搭載のスマホアプリです。症状を入力するだけで、迅速かつ適切なアドバイスを提供します。</p>
+      </div>
+   </div>
+
+   <div class="base_w" id="function">
+      <p class="large center">AI Doctorでできること</p>
+      <ul class="col3">
+         <li>
+            <img src="images/top/illust01.png" alt="オンライン診療">
+            <p>オンライン診療</p>
+         </li>
+         <li>
+            <img src="images/top/illust02.png" alt="服薬管理">
+            <p>服薬管理</p>
+         </li>
+         <li>
+            <img src="images/top/illust03.png" alt="AI問診">
+            <p>AI問診</p>
+         </li>
+         <li>
+            <img src="images/top/illust04.png" alt="健康測定">
+            <p>健康測定</p>
+         </li>
+         <li>
+            <img src="images/top/illust05.png" alt="食事管理">
+            <p>食事管理</p>
+         </li>
+      </ul>
+   </div>
+
+   <div id="recommend">
+      <div class="base_w col2">
+         <div>
+            <h3 class="underline">RECOMMEND</h3>
+            <p class="large">スマホがかかりつけ医になる時代。<br>AIがあなたの健康をトータルサポート。</p>
+            <p>「AIドクター」は、忙しい方でも手軽に健康管理ができる素晴らしいアプリです。オンライン診療やAIチャット問診は、専門的なアドバイスを迅速に提供し、服薬や食事の管理も簡単に行えます。健康意識の高い方には、ぜひお薦めしたいツールです。自宅にいながら、質の高い医療サービスを手に入れることができます。</p>
+         </div>
+         <div>
+            <img src="images/top/doctor_thumb.png" alt="〇〇医科大学附属病院　外科 〇〇 〇〇　医師">
+            <p>〇〇医科大学附属病院　外科</p>
+            <p class="large">〇〇 〇〇　医師</p>
+         </div>
+      </div>
+   </div>
+
+   <div class="base_w" id="price">
+      <h3 class="underline center">PRICE</h3>
+      <p class="large center">初月無料キャンペーン実施中!</p>
+      <a href="#" class="coupon">
+         <img src="images/top/coupon.png" alt="1 month FREE!">
+      </a>
+   </div>
+   
+</main>
+<!--各ページコンテンツここまで-->
+
+<%- include('./includes/_footer', {
+   pageName:pageName,
+   pageType:pageType,
+   _default:_default,
+   _pageData:_pageData,
+}); %>

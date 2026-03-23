@@ -1,0 +1,571 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: #000;
+}
+a:visited {
+  color: #000;
+}
+a:hover {
+  color: #000;
+}
+a:active {
+  color: #000;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html, body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+}
+@media screen and (max-width: 740px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+
+.underline, #price h2, #vision h2, #about h2 {
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #3c31d3;
+  background: linear-gradient(transparent 60%, #35d0ff 60%);
+}
+
+.large {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+header .wrap {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 740px) {
+  header .wrap {
+    padding: 10px 0;
+  }
+}
+header h1 {
+  display: block;
+  width: 20%;
+  margin-right: auto;
+}
+@media screen and (max-width: 740px) {
+  header h1 {
+    width: 30%;
+    margin-left: 10px;
+  }
+}
+header nav {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-right: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+@media screen and (max-width: 740px) {
+  header nav {
+    display: none;
+  }
+  header nav.open {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+  }
+}
+header nav a {
+  width: 20%;
+  text-align: center;
+}
+header nav a.current {
+  position: relative;
+}
+header nav a.current:before {
+  content: "●";
+  font-size: 0.7rem;
+  color: #ff48ff;
+  position: absolute;
+  top: -30%;
+  right: 20%;
+}
+@media screen and (max-width: 740px) {
+  header nav a.current:before {
+    top: 0%;
+    right: 40%;
+  }
+}
+header nav a:last-child {
+  background-color: #ff48ff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 2rem;
+  box-shadow: 10px 10px 20px rgba(60, 49, 211, 0.3);
+  transition: 0.5s;
+}
+header nav a:last-child:hover {
+  box-shadow: 20px 20px 20px rgba(60, 49, 211, 0.3);
+}
+@media screen and (max-width: 740px) {
+  header nav a {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+header #toggle {
+  display: none;
+}
+@media screen and (max-width: 740px) {
+  header #toggle {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0 10px 0 0;
+  }
+  header #toggle span {
+    display: block;
+    position: relative;
+  }
+  header #toggle span:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+  }
+  header #toggle span:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+  }
+  header #toggle span, header #toggle span:before, header #toggle span:after {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+  }
+  header #toggle.open span {
+    background-color: transparent;
+  }
+  header #toggle.open span:after {
+    transform: rotate(45deg) translate(-7px, -7px);
+  }
+  header #toggle.open span:before {
+    transform: rotate(-45deg);
+  }
+}
+
+.base_w {
+  max-width: 940px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 940px) {
+  .base_w {
+    max-width: 94%;
+  }
+}
+
+.sp_w {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.col2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col2 > div, .col2 li, .col2 a {
+  width: 48%;
+}
+@media screen and (max-width: 740px) {
+  .col2 > div, .col2 li, .col2 a {
+    width: 100%;
+  }
+}
+
+.col3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col3 > div, .col3 li, .col3 a {
+  width: 30%;
+}
+@media screen and (max-width: 740px) {
+  .col3 > div, .col3 li, .col3 a {
+    width: 48%;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #e6e6e6;
+}
+footer nav {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+footer nav a:first-child {
+  margin-bottom: 10px;
+}
+footer nav a:has(img) {
+  max-width: 200px;
+}
+footer nav a:last-child {
+  display: inline-block;
+  max-width: 150px;
+  margin: 10px 0 0 0;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: #ff48ff;
+  color: #fff;
+  text-align: center;
+  box-shadow: 10px 10px 20px rgba(60, 49, 211, 0.3);
+  transition: 0.5s;
+}
+footer nav a:last-child:hover {
+  box-shadow: 20px 20px 20px rgba(60, 49, 211, 0.3);
+}
+footer address {
+  text-align: right;
+}
+
+#top .main_visual {
+  padding: 60px 0 30px;
+  background: linear-gradient(45deg, #3c31d3, #35d0ff);
+}
+#top .main_visual .col2 {
+  align-items: center;
+}
+@media screen and (max-width: 740px) {
+  #top .main_visual .col2 div {
+    width: 80%;
+    margin: 30px auto 0;
+  }
+}
+#top .main_visual p {
+  color: #fff;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 740px) {
+  #top .main_visual p {
+    text-align: center;
+  }
+}
+#top #about {
+  margin: 60px auto;
+  align-items: center;
+}
+@media screen and (max-width: 740px) {
+  #top #about div:last-child {
+    margin-top: 30px;
+  }
+}
+#top #function {
+  margin: 60px auto;
+}
+#top #function .col3 {
+  justify-content: space-around;
+  align-items: first baseline;
+}
+#top #function .col3 li {
+  text-align: center;
+  margin-top: 30px;
+}
+#top #function .col3 li img {
+  margin-bottom: 10px;
+}
+#top #recommend {
+  background: linear-gradient(45deg, #3c31d3, #35d0ff);
+  padding: 60px 0;
+  color: #fff;
+}
+#top #recommend .underline, #top #recommend #price h2, #price #top #recommend h2, #top #recommend #vision h2, #vision #top #recommend h2, #top #recommend #about h2, #about #top #recommend h2 {
+  color: #fff;
+}
+#top #recommend .col2 {
+  align-items: center;
+}
+#top #recommend .col2 div:first-child {
+  width: 60%;
+}
+@media screen and (max-width: 740px) {
+  #top #recommend .col2 div:first-child {
+    width: 100%;
+  }
+}
+#top #recommend .col2 div:last-child {
+  width: 35%;
+  text-align: center;
+}
+@media screen and (max-width: 740px) {
+  #top #recommend .col2 div:last-child {
+    width: 100%;
+    margin-top: 30px;
+  }
+  #top #recommend .col2 div:last-child img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+#top #price {
+  margin: 60px auto;
+  text-align: center;
+}
+#top #price a.coupon {
+  display: block;
+  max-width: 600px;
+  margin: 30px auto 0;
+  filter: drop-shadow(30px 30px 20px rgba(60, 49, 211, 0.3));
+  transition: 0.5s;
+}
+#top #price a.coupon:hover {
+  box-shadow: 20px 20px 20px rgba(60, 49, 211, 0.3);
+}
+
+#about {
+  margin-top: 150px;
+}
+#about h2 {
+  display: block;
+  max-width: 110px;
+  margin: 0 auto 20px;
+}
+#about .points .point {
+  padding: 60px 0;
+}
+#about .points .point .col2 {
+  align-items: center;
+}
+@media screen and (max-width: 740px) {
+  #about .points .point .col2 div:has(img) {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+#about .points .point .col2 p {
+  text-align: justify;
+}
+#about .points > :nth-child(even) {
+  background-color: #e6e6e6;
+}
+#about .points > :nth-child(even) .col2 {
+  flex-direction: row-reverse;
+}
+
+#vision {
+  margin-top: 150px;
+}
+#vision h2 {
+  display: block;
+  max-width: 110px;
+  margin: 0 auto 20px;
+}
+#vision #graph {
+  max-width: 740px;
+  margin: 60px auto 180px;
+  position: relative;
+}
+@media screen and (max-width: 740px) {
+  #vision #graph {
+    max-width: 94%;
+  }
+}
+#vision #graph :nth-child(1) {
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 740px) {
+  #vision #graph :nth-child(1) {
+    max-width: 80%;
+  }
+}
+#vision #graph :nth-child(2) {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 30%;
+  text-align: justify;
+}
+#vision #graph :nth-child(3) {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  width: 30%;
+  text-align: justify;
+}
+#vision #graph :nth-child(4) {
+  position: absolute;
+  bottom: -15%;
+  right: 0;
+  width: 70%;
+  text-align: justify;
+}
+#vision #message {
+  background: linear-gradient(45deg, #3c31d3, #35d0ff);
+  padding: 60px 0;
+  color: #fff;
+}
+#vision #message .col2 {
+  align-items: center;
+}
+#vision #message .col2 div:first-child {
+  width: 60%;
+}
+@media screen and (max-width: 740px) {
+  #vision #message .col2 div:first-child {
+    width: 100%;
+  }
+}
+#vision #message .col2 div:last-child {
+  width: 35%;
+  text-align: center;
+}
+@media screen and (max-width: 740px) {
+  #vision #message .col2 div:last-child {
+    width: 100%;
+    margin-top: 30px;
+  }
+  #vision #message .col2 div:last-child img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+#price {
+  margin-top: 150px;
+}
+#price h2 {
+  display: block;
+  max-width: 90px;
+  margin: 0 auto 20px;
+}
+#price .plan {
+  margin-bottom: 60px;
+}
+#price .plan > li {
+  border: 3px solid #e6e6e6;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#price .plan > li:nth-child(2) {
+  border: 3px solid #35d0ff;
+}
+#price .plan > li:nth-child(2) h3 {
+  background-color: #35d0ff;
+  color: #fff;
+}
+#price .plan > li:nth-child(2) a.btn {
+  background-color: #35d0ff;
+  color: #fff;
+}
+#price .plan > li:nth-child(3) {
+  border: 3px solid #3c31d3;
+}
+#price .plan > li:nth-child(3) h3 {
+  background-color: #3c31d3;
+  color: #fff;
+}
+#price .plan > li:nth-child(3) a.btn {
+  background-color: #3c31d3;
+  color: #fff;
+}
+#price .plan h3 {
+  background-color: #e6e6e6;
+  padding: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-bottom: 10px;
+}
+#price .plan .function {
+  text-align: left;
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+}
+#price .plan .function > li {
+  width: 100%;
+}
+#price .plan .function > li.on::before {
+  display: inline-block;
+  content: url(../images/price/icon01.svg);
+  width: 1rem;
+  height: 1rem;
+  margin-right: 5px;
+}
+#price .plan .function > li.off::before {
+  display: inline-block;
+  content: url(../images/price/icon02.svg);
+  width: 1rem;
+  height: 1rem;
+  margin-right: 5px;
+}
+#price .plan a.btn {
+  display: inline-block;
+  background-color: #e6e6e6;
+  width: calc(100% - 2rem);
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  box-shadow: 10px 10px 20px rgba(60, 49, 211, 0.3);
+  transition: 0.5s;
+}
+#price .plan a.btn:hover {
+  box-shadow: 20px 20px 20px rgba(60, 49, 211, 0.3);
+}
+#price a.coupon {
+  display: block;
+  max-width: 600px;
+  margin: 30px auto 90px;
+  filter: drop-shadow(30px 30px 20px rgba(60, 49, 211, 0.3));
+  transition: 0.5s;
+}
+#price a.coupon:hover {
+  box-shadow: 20px 20px 20px rgba(60, 49, 211, 0.3);
+}

@@ -1,0 +1,33 @@
+<!--フッター-->
+<footer>
+    <div class="base_w">
+        <% if(pageName == "top"){ %>
+        <nav>
+            <a href="/"><img src="./images/common/logo.svg" alt="AI Doctor"></a>
+            <a href="/">TOP</a>
+            <a href="about">ABOUT</a>
+            <a href="vision">VISION</a>
+            <a href="price">PRICE</a>
+            <a href="#">SUBSCRIBE</a>
+        </nav>
+        <%}else{%>
+        <nav>
+            <a href="../"><img src="../images/common/logo.svg" alt="AI Doctor"></a>
+            <a href="../">TOP</a>
+            <a href="../about">ABOUT</a>
+            <a href="../vision">VISION</a>
+            <a href="../price">PRICE</a>
+            <a href="#">SUBSCRIBE</a>
+        </nav>
+        <%}%>
+        <address>All Rights Reserved.</address>
+    </div>
+</footer>
+<% if(pageName == "top"){ %>
+    <script type="text/javascript" src="js/common.js"></script>
+<%}else{%>
+    <script type="text/javascript" src="../js/common.js"></script>
+<%}%>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+@import 'reset';
+
+@import 'vars';
+
+@import 'mixin';
+
+@import 'common';
+
+@import 'layout';
+
+#top{
+	@import 'top';
+}
+
+#about{
+	margin-top: 150px;
+	@import 'about';
+}
+
+#vision{
+	margin-top: 150px;
+	@import 'vision';
+}
+
+#price{
+	margin-top: 150px;
+	@import 'price';
+}

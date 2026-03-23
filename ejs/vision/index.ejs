@@ -1,0 +1,56 @@
+<%
+var pageName = 'vision';
+var pageType = 'normal';
+var _default = json['default'];
+var _pageData = json['vision'];
+%>
+
+<%- 
+include('../includes/_header',{
+   pageName:pageName,
+   pageType:pageType,
+   _default:_default,
+   _pageData:_pageData,
+});
+%>
+
+<!--各ページコンテンツここから-->
+<main id="<%= pageName %>">
+   <div class="base_w">
+      <h2 class="underline">VISION</h2>
+      <p class="large center">「医療にまつわるさまざまなボーダーを超えていく」<br class="pc">それが私たちのビジョンです。</p>
+      <p class="center">私たちのビジョンは、テクノロジーで医療を革新し、<br class="pc">
+         誰もが平等に質の高い医療サービスにアクセスできる社会を実現することです。</p>
+   </div>
+
+   <div id="graph">
+      <img src="../images/vision/graph.png" alt="OUR VISION">
+      <p>テクノロジーと医療、双方が互いを高めあう調和のとれた社会を目指します。</p>
+      <p>性別や年齢、国籍を問わず、誰もが等しく医療にアクセスできる世界を目指します。</p>
+      <p>地球上、全ての人類にとってかけがえのない「健康」を守るために、私たちは飽くなき努力を続けます。</p>
+   </div>
+
+   <div id="message">
+      <div class="base_w col2">
+         <div>
+            <p class="large">医療×テクノロジーの力で、<br>さまざまなボーダーを超えていく企業でありたい。</p>
+            <p>「AIドクター」は、誰もが安心して健康管理を行える未来を目指して開発されました。私たちの目標は、テクノロジーの力で医療へのアクセスをより身近に、そして簡単にすることです。このアプリを通じて、皆様の健康を守り、日々の生活をより豊かにするお手伝いができることを心から願っています。</p>
+         </div>
+         <div>
+            <img src="../images/vision/ceo_thumb.png" alt="">
+            <p>株式会社〇〇テック CEO</p>
+            <p class="large">〇〇 〇〇</p>
+         </div>
+      </div>
+   </div>
+
+</main>
+<!--各ページコンテンツここまで-->
+
+
+<%- include('../includes/_footer', {
+   pageName:pageName,
+   pageType:pageType,
+   _default:_default,
+   _pageData:_pageData,
+}); %>

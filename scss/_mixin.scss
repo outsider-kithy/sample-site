@@ -1,0 +1,31 @@
+@mixin tab{
+	@media screen and (max-width: $base_w){
+		@content;
+	}
+};
+
+@mixin sp{
+	@media screen and (max-width: $sp_w){
+		@content;
+	}
+};
+
+@mixin blue_gradient{
+	background: linear-gradient(45deg, $blue, $lightBlue);
+}
+
+@mixin drop_shadow{
+	box-shadow: 10px 10px 20px rgba($blue, 0.3);
+	transition: 0.5s;
+	&:hover{
+		box-shadow: 20px 20px 20px rgba($blue, 0.3);
+	}
+}
+
+@mixin image_drop_shadow{
+	filter: drop-shadow(30px 30px 20px rgba($blue, 0.3));
+	transition: 0.5s;
+	&:hover{
+		box-shadow: 20px 20px 20px rgba($blue, 0.3);
+	}
+}

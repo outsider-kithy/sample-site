@@ -1,0 +1,69 @@
+h2{
+	@extend .underline;
+	display: block;
+	max-width: 110px;
+	margin: 0 auto 20px;
+}
+
+#graph{
+	max-width: $sp_w;
+	margin: 60px auto 180px;
+	position: relative;
+	@include sp{
+		max-width: 94%;
+	}
+	:nth-child(1){
+		max-width: 500px;
+		margin: 0 auto;
+		@include sp{
+			max-width: 80%;
+		}
+	}
+	:nth-child(2){
+		position: absolute;
+		top: 5%;
+		left: 0;
+		width: 30%;
+		text-align: justify;
+	}
+	:nth-child(3){
+		position: absolute;
+		top: 25%;
+		right: 0;
+		width: 30%;
+		text-align: justify
+	}
+	:nth-child(4){
+		position: absolute;
+		bottom: -15%;
+		right: 0;
+		width: 70%;
+		text-align: justify
+	}
+}
+#message{
+	@include blue_gradient;
+	padding: 60px 0;
+	color: #fff;
+	.col2{
+		align-items: center;
+		div:first-child{
+			width: 60%;
+			@include sp{
+				width: 100%;
+			}
+		}
+		div:last-child{
+			width: 35%;
+			text-align: center;
+			@include sp{
+				width: 100%;
+				margin-top: 30px;
+				img{
+					max-width: 200px;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}

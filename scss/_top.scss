@@ -1,0 +1,86 @@
+.main_visual{
+	padding: 60px 0 30px;
+	@include blue_gradient;
+	.col2{
+		align-items: center;
+		@include sp{
+		div{
+				width: 80%;
+				margin: 30px auto 0;
+			}
+		}
+	}
+	p{
+		color: #fff;
+		margin-bottom: 30px;
+		@include sp{
+			text-align: center;
+		}
+	}
+}
+
+#about{
+	margin: 60px auto;
+	align-items: center;
+	@include sp{
+		div:last-child{
+			margin-top: 30px;
+		}
+	}
+}
+
+#function{
+	margin: 60px auto;
+	.col3{
+		justify-content: space-around;
+		align-items: first baseline;
+		li{
+			text-align: center;
+			margin-top: 30px;
+			img{
+				margin-bottom: 10px
+			}
+		}
+	}
+}
+
+#recommend{
+	@include blue_gradient;
+	padding: 60px 0;
+	color: #fff;
+	.underline{
+		color: #fff;
+	}
+	.col2{
+		align-items: center;
+		div:first-child{
+			width: 60%;
+			@include sp{
+				width: 100%;
+			}
+		}
+		div:last-child{
+			width: 35%;
+			text-align: center;
+			@include sp{
+				width: 100%;
+				margin-top: 30px;
+				img{
+					max-width: 200px;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+#price{
+	margin: 60px auto;
+	text-align: center;
+	a.coupon{
+		display: block;
+		max-width: 600px;
+		margin: 30px auto 0;
+		@include image_drop_shadow;
+	}
+}

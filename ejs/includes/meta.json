@@ -1,0 +1,23 @@
+{
+    "default":{
+        "title": "AI Doctor",
+        "description": "スマホアプリ「AI Doctor」の公式サイト。",
+        "keyword":  "アプリ,スマホ,健康管理,ヘルスケア,オンライン診療,服薬管理,食事管理,AI問診,健康診断"
+    },
+    "top":{
+        "title": "TOP",
+        "canonical": "https://ai-doctor.com/"
+    },
+    "about":{
+        "title": "ABOUT",
+        "canonical": "https://ai-doctor.com/about/"
+    },
+    "vision":{
+        "title": "VISION",
+        "canonical": "https://ai-doctor.com/vision/"
+    },
+    "price":{
+        "title": "PRICE",
+        "canonical": "https://ai-doctor.com/price/"
+    }
+}

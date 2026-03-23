@@ -1,0 +1,77 @@
+<%
+var pageName = 'price';
+var pageType = 'normal';
+var _default = json['default'];
+var _pageData = json['price'];
+%>
+
+<%- 
+include('../includes/_header',{
+   pageName:pageName,
+   pageType:pageType,
+   _default:_default,
+   _pageData:_pageData,
+});
+%>
+
+<!--各ページコンテンツここから-->
+<main id="<%= pageName %>">
+   <div class="base_w">
+      <h2 class="underline">PRICE</h2>
+      <ul class="col3 plan">
+         <li>
+            <h3>FREE</h3>
+            <p class="large">無料プラン</p>
+            <ul class="function">
+               <li class="off">オンライン診療</li>
+               <li class="on">服薬管理</li>
+               <li class="off">AI問診</li>
+               <li class="off">健康診断</li>
+               <li class="on">食事管理</li>
+            </ul>
+            <a href="#" class="btn">FREEプランではじめる</a>
+         </li>
+         <li>
+            <h3>STANDARD</h3>
+            <p class="large">月額980円プラン</p>
+            <ul class="function">
+               <li class="off">オンライン診療</li>
+               <li class="on">服薬管理</li>
+               <li class="on">AI問診</li>
+               <li class="on">健康診断</li>
+               <li class="on">食事管理</li>
+            </ul>
+            <a href="#" class="btn">STANDARDプランではじめる</a>
+         </li>
+         <li>
+            <h3>PREMIUM</h3>
+            <p class="large">月額2,980円プラン</p>
+            <ul class="function">
+               <li class="on">オンライン診療</li>
+               <li class="on">服薬管理</li>
+               <li class="on">AI問診</li>
+               <li class="on">健康診断</li>
+               <li class="on">食事管理</li>
+            </ul>
+            <a href="#" class="btn">PREMIUMプランではじめる</a>
+         </li>
+      </ul>
+   </div>
+
+   <div class="base_w">
+      <p class="large center">初月無料キャンペーン実施中!</p>
+      <a href="#" class="coupon">
+         <img src="../images/top/coupon.png" alt="1 month FREE!">
+      </a>
+   </div>
+
+</main>
+<!--各ページコンテンツここまで-->
+
+
+<%- include('../includes/_footer', {
+   pageName:pageName,
+   pageType:pageType,
+   _default:_default,
+   _pageData:_pageData,
+}); %>

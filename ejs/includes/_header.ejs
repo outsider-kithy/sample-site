@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title><%= _pageData["title"] %> | AI Doctor</title>
+        <meta name="description" content="<%= _default['description'] %>">
+        <meta name="keyword" content="<%= _default['keyword'] %>">
+        <link rel="canonical" href="<%= _pageData['canonical'] %>" />
+
+        <!--OGP-->
+        <meta property="og:url" content="<%= _pageData['canonical'] %>">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="AI Doctor">
+        <meta property="og:description" content="<%= _default['description'] %>">
+        <meta property="og:site_name" content="AI Doctor">
+        <meta property="og:image" content="https://outsider-kithy.github.io/gulp-template-sample/chap06/dist/images/common/ogp_img.jpg">
+
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!--css-->
+        <% if(pageName == "top"){ %>
+            <link rel="stylesheet" href="./css/style.css">
+        <%}else{%>
+            <link rel="stylesheet" href="../css/style.css">
+        <%}%>
+    </head>
+
+    <body>
+        <header>
+            <% if(pageName == "top"){ %>
+                <div class="wrap">
+                    <h1><a href="./"><img src="./images/common/logo.svg" alt="AI Doctor"></a></h1>
+                    <nav id="menu">
+                        <a href="./" <% if(pageName == "top"){%>class="current"<%}%>>TOP</a>
+                        <a href="about" <% if(pageName == "about"){%>class="current"<%}%>>ABOUT</a>
+                        <a href="vision" <% if(pageName == "vision"){%>class="current"<%}%>>VISION</a>
+                        <a href="price" <% if(pageName == "price"){%>class="current"<%}%>>PRICE</a>
+                        <a href="#">SUBSCRIBE</a>
+                    </nav>
+                    <a id="toggle"><span></span></a>
+            </div>
+            <%}else{%>
+                <div class="wrap">
+                    <h1><a href="../"><img src="../images/common/logo.svg" alt="AI Doctor"></a></h1>
+                    <nav id="menu">
+                        <a href="../" <% if(pageName == "top"){%>class="current"<%}%>>TOP</a>
+                        <a href="../about" <% if(pageName == "about"){%>class="current"<%}%>>ABOUT</a>
+                        <a href="../vision" <% if(pageName == "vision"){%>class="current"<%}%>>VISION</a>
+                        <a href="../price" <% if(pageName == "price"){%>class="current"<%}%>>PRICE</a>
+                        <a href="#">SUBSCRIBE</a>
+                    </nav>
+                    <a id="toggle"><span></span></a>
+                </div>
+            <%}%>
+            
+        </header>

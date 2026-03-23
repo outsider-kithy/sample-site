@@ -1,0 +1,194 @@
+header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	.wrap{
+		max-width: $base_w;
+		margin: 0 auto;
+		padding: 20px 0;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		@include sp{
+			padding: 10px 0;
+		}
+	}
+	h1{
+		display: block;
+		width: 20%;
+		margin-right: auto;
+		@include sp{
+			width: 30%;
+			margin-left: 10px;
+		}
+	}
+	nav{
+		display: flex;
+		align-items: center;
+		width: 80%;
+		margin-right: 0;
+		font-family: "Poppins", sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		@include sp{
+			display: none;
+			&.open{
+				display: flex;
+				flex-wrap: wrap;
+				background-color: rgba(255,255,255,0.7);
+				width: 100%;
+				padding: 1.0rem;
+				position: fixed;
+				top: 0;
+			}
+		}
+		a{
+			width: 20%;
+			text-align: center;
+			&.current{
+				position: relative;
+				&:before{
+                    content:'●';
+                    font-size: 0.7rem;
+                    color: $pink;
+                    position: absolute;
+                    top: -30%;
+                    right: 20%;
+					@include sp{
+						top: 0%;
+						right: 40%;
+					}
+                }
+			}
+			&:last-child{
+				background-color: $pink;
+				color: #fff;
+				padding: 10px;
+				border-radius: 2rem;
+				@include drop_shadow;
+			}
+			@include sp{
+				width: 100%;
+				padding: 1.0rem;
+			}
+		}
+	}
+	#toggle{
+        display: none;
+		@include sp{
+			display: block;
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+			margin: 0;
+			padding: 0 10px 0 0;
+			span{
+				display: block;
+				position: relative;
+			}
+			span:before{
+				content:'';
+				position: absolute;
+				top:10px;
+			}
+			span:after{
+				content:'';
+				position: absolute;
+				top: 20px;
+			}
+	
+			span,span:before,span:after{
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: #000;
+				transition: all 0.3s;
+				backface-visibility: hidden;
+			}
+			&.open{
+				span{
+					background-color: transparent;
+				}
+				span:after{
+					transform:rotate(45deg) translate(-7px,-7px);
+				}
+				span:before{
+					transform:rotate(-45deg);
+				}
+			}
+		}
+    }
+}
+
+.base_w{
+	max-width: $base_w;
+	margin: 0 auto;
+	@include tab{
+		max-width: 94%;
+	}
+}
+.sp_w{
+	max-width: $sp_w;
+	margin: 0 auto;
+}
+
+.col2{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	> div, li, a{
+		width: 48%;
+		@include sp{
+			width: 100%;
+		}
+	}
+}
+
+.col3{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	> div, li, a{
+		width: 30%;
+		@include sp{
+			width: 48%;
+		}
+	}
+}
+
+footer{
+	width: 100%;
+	padding: 60px 0;
+	background-color: $glay;
+	nav{
+		max-width: $base_w;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		font-family: "Poppins", sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		a:first-child{
+			margin-bottom: 10px;
+		}
+		a:has(img){
+			max-width: 200px;
+		}
+		a:last-child{
+			display: inline-block;
+			max-width: 150px;
+			margin: 10px 0 0 0;
+			padding: 0.5rem;
+			border-radius: 2.0rem;
+			background-color: $pink;
+			color: #fff;
+			text-align: center;
+			@include drop_shadow;
+		}
+	}
+	address{
+		text-align: right;
+	}
+}

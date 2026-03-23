@@ -1,0 +1,90 @@
+<%
+var pageName = 'about';
+var pageType = 'normal';
+var _default = json['default'];
+var _pageData = json['about'];
+%>
+
+<%- 
+include('../includes/_header',{
+   pageName:pageName,
+   pageType:pageType,
+   _default:_default,
+   _pageData:_pageData,
+});
+%>
+
+<!--各ページコンテンツここから-->
+<main id="<%= pageName %>">
+   <div class="base_w">
+      <h2 class="center">ABOUT</h2>
+      <p class="large center">健康にまつわるデータをスマホで一括管理。<br>誰もが手軽に医療にアクセスできる世界を。</p>
+      <p class="center">「AIドクター」は、24時間いつでも健康相談ができる<br class="pc">
+         AI搭載のスマホアプリです。症状を入力するだけで、<br class="pc">
+         迅速かつ適切なアドバイスを提供します。
+      </p>
+
+   </div>
+
+   <div class="points">
+      <div class="point">
+         <p class="large center">AI Doctorでできること</p>
+         <div class="base_w col2">
+            <div><img src="../images/about/illust01.png" alt="オンライン診療"></div>
+            <div>
+               <p class="large">オンライン診療</p>
+               <p>「AIドクター」のオンライン診療機能では、専門医とビデオ通話を通じて直接相談することが可能です。アプリ内で症状を入力した後、必要に応じて医師との診療予約を行い、指定の時間にスマホから診療を受けられます。診断結果や処方箋はアプリ内に保存され、薬の受け取りや次回の予約も簡単に管理できます。遠隔地や忙しい方でも、自宅で安心して専門的な医療サービスを受けることができる便利な機能です。</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="point">
+         <div class="base_w col2">
+            <div><img src="../images/about/illust02.png" alt="服薬管理"></div>
+            <div>
+               <p class="large">服薬管理</p>
+               <p>「AIドクター」の服薬管理機能では、処方された薬の飲み忘れを防ぐためのサポートを提供します。アプリに服薬スケジュールを入力することで、リマインダーが設定され、飲むべき時間に通知が届きます。また、薬の残量を記録し、再処方が必要なタイミングをお知らせする機能も搭載。さらに、薬の効果や副作用を記録し、必要に応じて医師にフィードバックを送ることが可能です。毎日の服薬をしっかりとサポートし、健康管理をよりスムーズに行えます。</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="point">
+         <div class="base_w col2">
+            <div><img src="../images/about/illust03.png" alt="AI問診"></div>
+            <div>
+               <p class="large">AI問診</p>
+               <p>「AIドクター」のAIチャット問診機能では、AIがユーザーの症状や健康状態を会話形式でヒアリングし、迅速に適切なアドバイスを提供します。ユーザーは質問に答えるだけで、病院へ行く前に自己診断を行い、必要な対処法を知ることができます。また、AIは学習機能を持ち、ユーザーの過去のデータを基によりパーソナライズされたアドバイスを提供します。気軽に健康相談ができるため、早期発見や予防にも役立つ信頼性の高い機能です。</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="point">
+         <div class="base_w col2">
+            <div><img src="../images/about/illust04.png" alt="健康測定"></div>
+            <div>
+               <p class="large">健康測定</p>
+               <p>「AIドクター」の健康測定機能では、スマホのセンサーや連携デバイスを活用して、心拍数や血圧、体温などのバイタルデータを簡単に測定・記録できます。測定結果は自動的にアプリ内に保存され、日々の健康状態をグラフで視覚的に確認可能。異常が検知された場合、早期の対処を促すアラートも送信されます。定期的な測定によって、健康管理を手軽に行い、病気の予防や改善に役立つ機能です。</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="point">
+         <div class="base_w col2">
+            <div><img src="../images/about/illust05.png" alt="食事管理"></div>
+            <div>
+               <p class="large">食事管理</p>
+               <p>「AIドクター」の食事管理機能は、日々の食事を記録し、栄養バランスやカロリー摂取をサポートします。食事内容を入力すると、AIが自動で栄養素を解析し、適切なアドバイスを提供。過去のデータをもとに、個人に最適な食事プランを提案することも可能です。また、食事の記録はグラフで視覚的に確認でき、健康維持やダイエットの目標達成を手助けします。日常の食生活を簡単に管理し、健康的な習慣をサポートする機能です。</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</main>
+<!--各ページコンテンツここまで-->
+
+<%- include('../includes/_footer', {
+   pageName:pageName,
+   pageType:pageType,
+   _default:_default,
+   _pageData:_pageData,
+}); %>

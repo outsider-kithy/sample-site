@@ -1,0 +1,30 @@
+h2{
+	@extend .underline;
+	display: block;
+	max-width: 110px;
+	margin: 0 auto 20px;
+}
+.points{
+	.point{
+		padding: 60px 0;
+		.col2{
+			align-items: center;
+			div:has(img){
+				@include sp{
+					width: 60%;
+					margin: 0 auto;
+				}
+			}
+			p{
+				text-align: justify;
+			}
+		}
+	}
+	
+	> :nth-child(even){
+		background-color: $glay;
+		.col2{
+			flex-direction: row-reverse;
+		}
+	}
+}
